@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "88004312627",
+    "project_id": "fir-tarea-aeed3",
+    "storage_bucket": "fir-tarea-aeed3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88004312627:android:107b40f15bf2c0c01e2d46",
+        "android_client_info": {
+          "package_name": "com.example.firebasetarea"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAyFtqpVE7PzeWvjTdjQ6m6SGb2Q4BubQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88004312627:android:39a06d5f0970fc281e2d46",
+        "android_client_info": {
+          "package_name": "com.example.tarea0902"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAyFtqpVE7PzeWvjTdjQ6m6SGb2Q4BubQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88004312627:android:380d2128ae1a7f8e1e2d46",
+        "android_client_info": {
+          "package_name": "com.example.xddd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAyFtqpVE7PzeWvjTdjQ6m6SGb2Q4BubQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
