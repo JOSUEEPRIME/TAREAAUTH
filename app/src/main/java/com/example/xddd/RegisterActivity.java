@@ -1,5 +1,6 @@
 package com.example.xddd;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -33,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity{
     FirebaseAuth mAuth;
     FirebaseUser mUser;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity{
         alreadyHaveaccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this,MainActivity.class)));
+                startActivity(new Intent(RegisterActivity.this,MainActivity.class));
 
 
             }
@@ -73,10 +75,12 @@ public class RegisterActivity extends AppCompatActivity{
         String password = inputPassword.getText().toString();
         String confirmPassword = inputCConformPassword.getText().toString();
 
-        if (!email.matches(emailPattern)) ;
+        if (!email.matches(emailPattern));
         {
             inputEmail.setError("Enter Connext Email");
-        }else if (password.isEmpty() || password.length() < 6) {
+
+        }if (password.isEmpty() || password.length() < 6)
+        {
             inputPassword.setError("Enter Proper Password");
         } else if (password.equals(confirmPassword))
         {
