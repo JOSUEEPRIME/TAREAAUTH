@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.OAuthProvider;
 
 import java.util.ArrayList;
@@ -30,17 +31,20 @@ public class GitHubActivity extends AppCompatActivity {
     EditText inputEmail;
     Button btnLogin;
     FirebaseAuth mAuth;
+    FirebaseUser mUser;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_git_hub);
 
         inputEmail=findViewById(R.id.inputEmail);
         btnLogin=findViewById(R.id.btnLogin);
         mAuth=FirebaseAuth.getInstance();
+        mUser=mAuth.getCurrentUser();
 
 
 
@@ -48,12 +52,11 @@ public class GitHubActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = inputEmail.getText().toString();
-                if (email.matches(emailPattern)) {
-                    Toast.makeText(GitHubActivity.this, "Enter a proper Email", Toast.LENGTH_SHORT).show();
+                if (!email.matches(emailPattern)) {
+                    Toast.makeText(GitHubActivity.this, "Ingresa un email apropiado", Toast.LENGTH_SHORT).show();
                 } else
                 {
-                    OAuthProvider.Builder provider = OAuthProvider.newBuilder("github.com");
-                    // Target specific email with login hint.
+                  OAuthProvider.Builder provider = OAuthProvider.newBuilder("github.com");
                     provider.addCustomParameter("login", email);
 
                     List<String> scopes =
@@ -91,7 +94,7 @@ public class GitHubActivity extends AppCompatActivity {
                                         });
                     } else {
                         mAuth
-                                .startActivityForSignInWithProvider(/* activity= */ GitHubActivity.this, provider.build())
+                                .startActivityForSignInWithProvider(GitHubActivity.this, provider.build())
                                 .addOnSuccessListener(
                                         new OnSuccessListener<AuthResult>() {
                                             @Override
@@ -123,7 +126,7 @@ public class GitHubActivity extends AppCompatActivity {
 
     private void openNextActivity() {
         Intent intent=new Intent(GitHubActivity.this,HomeActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
     }

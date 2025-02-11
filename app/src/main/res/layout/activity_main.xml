@@ -95,7 +95,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnSesion"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="18dp"
@@ -119,9 +119,9 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/btnLogin"
-                app:layout_constraintStart_toStartOf="@+id/btnLogin"
-                app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+                app:layout_constraintEnd_toEndOf="@+id/btnSesion"
+                app:layout_constraintStart_toStartOf="@+id/btnSesion"
+                app:layout_constraintTop_toBottomOf="@+id/btnSesion" />
 
             <ImageView
                 android:id="@+id/imgGoogle"
@@ -188,7 +188,7 @@
                 android:layout_marginStart="16dp"
                 android:background="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/textView3"
-                app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+                app:layout_constraintEnd_toEndOf="@+id/btnSesion"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView3"
                 app:layout_constraintTop_toTopOf="@+id/textView3"
@@ -203,7 +203,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/textView3"
                 app:layout_constraintEnd_toStartOf="@+id/textView3"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/btnLogin"
+                app:layout_constraintStart_toStartOf="@+id/btnSesion"
                 app:layout_constraintTop_toTopOf="@+id/textView3"
                 app:layout_constraintVertical_bias="0.47" />
 
