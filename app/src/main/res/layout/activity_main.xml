@@ -18,7 +18,6 @@
         android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/imgFacebook"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -28,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="132dp"
                 android:fontFamily="@font/aldrich"
-                android:text="REGISTRAR"
+                android:text="INICIO SESION"
                 android:textColor="@color/white"
                 android:textSize="48sp"
                 android:textStyle="bold"
@@ -98,11 +97,11 @@
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="48dp"
                 android:layout_marginTop="18dp"
                 android:background="@drawable/input_fondo"
                 android:gravity="center"
-                android:text="REGISTRATE"
+                android:text="INICIAR SESION"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -132,8 +131,8 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgGithub"
                 app:srcCompat="@drawable/gg"
-                tools:layout_editor_absoluteY="534dp"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -143,19 +142,20 @@
                 app:layout_constraintEnd_toStartOf="@+id/imgGithub"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imgGoogle"
+                app:layout_constraintTop_toTopOf="@+id/imgGithub"
                 app:srcCompat="@drawable/face"
-                tools:layout_editor_absoluteY="534dp"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/imgGithub"
                 android:layout_width="85dp"
                 android:layout_height="50dp"
+                android:layout_marginTop="5dp"
                 app:layout_constraintEnd_toStartOf="@+id/imgPhone"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imgFace"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
                 app:srcCompat="@drawable/gt"
-                tools:layout_editor_absoluteY="534dp"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -165,8 +165,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/imgTwitter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imgGithub"
+                app:layout_constraintTop_toTopOf="@+id/imgGithub"
                 app:srcCompat="@drawable/fon"
-                tools:layout_editor_absoluteY="534dp"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -176,8 +176,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imgPhone"
+                app:layout_constraintTop_toTopOf="@+id/imgGithub"
                 app:srcCompat="@drawable/twt"
-                tools:layout_editor_absoluteY="534dp"
                 tools:ignore="MissingConstraints" />
 
 

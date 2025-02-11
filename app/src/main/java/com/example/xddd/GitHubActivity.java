@@ -36,7 +36,6 @@ public class GitHubActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_git_hub);
 
         inputEmail=findViewById(R.id.inputEmail);

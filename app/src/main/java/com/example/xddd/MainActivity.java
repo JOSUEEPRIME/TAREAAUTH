@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     FirebaseUser mUser;
-    ImageView imgGitHub;
+    ImageView imgGithub;
 
 
     @Override
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         inputEmail=findViewById(R.id.inputEmail);
         inputPassword=findViewById(R.id.inputPassword);
-        imgGitHub=findViewById(R.id.imgGithub);
+        imgGithub=findViewById(R.id.imgGithub);
 
         progressDialog=new ProgressDialog(this);
         mAuth=FirebaseAuth.getInstance();
@@ -49,14 +49,14 @@ public class MainActivity extends AppCompatActivity {
         createnewAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MainActivity.class));
+                startActivity(new Intent(MainActivity.this,RegisterActivity.class));
 
                 btnLogin.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v){ perforLogin() ;}
                 });
 
-                imgGitHub.setOnClickListener(new View.OnClickListener() {
+                imgGithub.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent intent=new Intent(MainActivity.this,GitHubActivity.class);

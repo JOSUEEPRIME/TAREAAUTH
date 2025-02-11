@@ -10,14 +10,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.XDDD"
-        tools:targetApi="31">
+        android:theme="@style/Theme.FirebaseAuthAll"
+        tools:targetApi="1">
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".GitHubActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
